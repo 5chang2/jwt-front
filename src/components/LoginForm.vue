@@ -12,13 +12,10 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   name: 'LoginForm',
-  props: {
-    msg: String
-  },
   data: function(){
     return {
       credentials: {
@@ -29,14 +26,7 @@ export default {
   },
   methods: {
     getAuthToken(){
-      axios.post('http://127.0.0.1:8000/accounts/api-token-auth/', this.credentials)
-      .then((e)=>{
-        console.log(e)
-        localStorage.setItem('jwt-token', e.data.token);
-      })
-      .catch((err)=>{
-        console.log(err)
-      })
+      console.log('getAuthToken')
     }
   }
 }

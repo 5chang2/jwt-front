@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   name: 'Index',
@@ -21,18 +21,7 @@ export default {
   },
   methods: {
     getArticles(){
-      const headers = {
-        'Authorization': 'JWT ' + localStorage.getItem('jwt-token')
-      }
-      
-      axios.get('http://127.0.0.1:8000/articles/', {headers})
-      .then(e=>{
-        console.log(e)
-        this.articles = e.data
-      })
-      .catch(err=>{
-        console.log(err)
-      })
+      console.log('getArticles')
     }
   },
   mounted: function(){

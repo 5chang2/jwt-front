@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   name: 'ArticleForm',
@@ -21,23 +21,12 @@ export default {
       articleData: {
         title: '',
         content: '',
-        user: 1
       }
     }
   },
   methods: {
     createArticle(){
-      const headers = {
-        'Authorization': 'JWT ' + localStorage.getItem('jwt-token')
-      }
-      console.log(headers)
-      axios.post('http://127.0.0.1:8000/articles/', this.articleData, {headers})
-      .then(e=>{
-        console.log(e)
-      })
-      .catch(err=>{
-        console.log(err)
-      })
+      console.log('createArticle')
     }
   }
 }
